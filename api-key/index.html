@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://immich-lounge.github.io/architecture/">
+        <link rel="canonical" href="https://immich-lounge.github.io/api-key/">
       
       
-        <link rel="prev" href="../roku-apps/">
+        <link rel="prev" href="../installation/">
       
       
-        <link rel="next" href="../changelog/">
+        <link rel="next" href="../configuration/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Architecture - Immich Lounge</title>
+        <title>Immich API Key - Immich Lounge</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecture" class="md-skip">
+        <a href="#immich-api-key" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture
+              Immich API Key
             
           </span>
         </div>
@@ -212,10 +212,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../getting-started/" class="md-tabs__link">
           
   
@@ -231,12 +233,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../companion-app/" class="md-tabs__link">
           
   
@@ -369,26 +369,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -406,7 +411,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -481,10 +486,39 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../api-key/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 18h-6v-3h-1.7c-1.1 2.4-3.6 4-6.3 4-3.9 0-7-3.1-7-7s3.1-7 7-7c2.7 0 5.2 1.6 6.3 4H24v6h-3zm-4-2h2v-3h3v-2H11.9l-.2-.7C11 8.3 9.1 7 7 7c-2.8 0-5 2.2-5 5s2.2 5 5 5c2.1 0 4-1.3 4.7-3.3l.2-.7H17zM7 15c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3m0-4c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Immich API Key
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -502,6 +536,60 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-key-in-immich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the key in immich
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended permissions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-the-key-is-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the key is used
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -548,31 +636,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -590,7 +673,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -665,39 +748,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14c-3.36 0-4.46 1.35-4.82 2.24C9.25 16.7 10 17.76 10 19a3 3 0 0 1-3 3 3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V7.83A2.99 2.99 0 0 1 4 5a3 3 0 0 1 3-3 3 3 0 0 1 3 3c0 1.31-.83 2.42-2 2.83v5.29c.88-.65 2.16-1.12 4-1.12 2.67 0 3.56-1.34 3.85-2.23A3.01 3.01 0 0 1 14 7a3 3 0 0 1 3-3 3 3 0 0 1 3 3c0 1.34-.88 2.5-2.09 2.86C17.65 11.29 16.68 14 13 14m-6 4a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1M7 4a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m10 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"/></svg>
-  
-  <span class="md-ellipsis">
-    
-  
-    Architecture
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
         
   
   
@@ -715,171 +769,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#component-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Component Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component-1-companion-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Component 1: Companion Service
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Component 1: Companion Service">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Storage
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enriched-profile-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enriched Profile Response
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#playlist-cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Playlist Cache
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component-2-roku-channel-screensaver" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Component 2: Roku Channel + Screensaver
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Component 2: Roku Channel + Screensaver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#startup-flow-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Startup Flow (Channel)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#registry-keys-roku" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Registry Keys (Roku)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#media-url-construction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Media URL Construction
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fallback-chain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fallback Chain
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component-3-immich-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Component 3: immich Server
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Security Model
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1231,10 +1120,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#component-overview" class="md-nav__link">
+  <a href="#create-the-key-in-immich" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Component Overview
+        Create the key in immich
       
     </span>
   </a>
@@ -1242,121 +1131,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#component-1-companion-service" class="md-nav__link">
+  <a href="#recommended-permissions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Component 1: Companion Service
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Component 1: Companion Service">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-storage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Data Storage
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enriched-profile-response" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enriched Profile Response
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#playlist-cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Playlist Cache
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component-2-roku-channel-screensaver" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Component 2: Roku Channel + Screensaver
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Component 2: Roku Channel + Screensaver">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#startup-flow-channel" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Startup Flow (Channel)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#registry-keys-roku" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Registry Keys (Roku)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#media-url-construction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Media URL Construction
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fallback-chain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Fallback Chain
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component-3-immich-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Component 3: immich Server
+        Recommended permissions
       
     </span>
   </a>
@@ -1364,10 +1142,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#security-model" class="md-nav__link">
+  <a href="#where-the-key-is-used" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Security Model
+        Where the key is used
       
     </span>
   </a>
@@ -1392,257 +1170,41 @@
   
 
 
-<h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h1>
-<h2 id="component-overview">Component Overview<a class="headerlink" href="#component-overview" title="Permanent link">&para;</a></h2>
-<p>Main flow:</p>
+<h1 id="immich-api-key">Immich API Key<a class="headerlink" href="#immich-api-key" title="Permanent link">&para;</a></h1>
+<p>Immich Lounge needs an API key from your immich account so the companion can read albums, people, tags, memories, and asset metadata, and so the Roku can fetch media directly from immich.</p>
+<h2 id="create-the-key-in-immich">Create the key in immich<a class="headerlink" href="#create-the-key-in-immich" title="Permanent link">&para;</a></h2>
+<p>In the immich web app:</p>
 <ol>
-<li>A browser connects to the companion service to configure settings and profiles.</li>
-<li>The companion service stores settings, builds playlists, and exposes the setup API used by the Roku.</li>
-<li>The Roku fetches the active profile and playlist from the companion.</li>
-<li>The Roku then loads media directly from immich.</li>
-<li>immich remains the source of truth for photos and metadata.</li>
+<li>Click your user menu in the top-right corner.</li>
+<li>Open <strong>Account Settings</strong>.</li>
+<li>Open the API keys section.</li>
+<li>Create a new key for <strong>Immich Lounge</strong>.</li>
+<li>Copy the key and paste it into the companion Connection page.</li>
 </ol>
-<p>Weather path:</p>
-<table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Destination</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Open-Meteo API</td>
-<td>Roku device</td>
-<td>Weather data polling for the optional on-screen weather display</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Key principle:</strong> The companion handles configuration and playlist building. The Roku handles media delivery and weather directly — the companion is never in those paths.</p>
-<hr />
-<h2 id="component-1-companion-service">Component 1: Companion Service<a class="headerlink" href="#component-1-companion-service" title="Permanent link">&para;</a></h2>
-<p><strong>Tech stack:</strong> ASP.NET Core (.NET 10), Blazor Server, JSON file storage, Docker</p>
-<p>The companion is a Docker container that runs on a machine on your LAN. It provides:</p>
+<p>If your immich version supports scoped API keys, use a dedicated key for Immich Lounge instead of reusing a broader key.</p>
+<p>Official immich docs:
+<a href="https://docs.immich.app/features/user-settings/">User Settings</a></p>
+<h2 id="recommended-permissions">Recommended permissions<a class="headerlink" href="#recommended-permissions" title="Permanent link">&para;</a></h2>
+<p>If your immich version supports scoped API keys, this is the practical minimum set for most setups:</p>
 <ul>
-<li><strong>Web UI</strong> — browser-based configuration via Blazor Server</li>
-<li><strong>REST API</strong> — used by the Roku to fetch profiles and playlists</li>
-<li><strong>Playlist builder</strong> — queries immich, deduplicates, shuffles, and caches the asset list</li>
+<li><code>asset.read</code></li>
+<li><code>asset.statistics</code></li>
+<li><code>asset.view</code></li>
+<li><code>album.read</code></li>
+<li><code>person.read</code></li>
+<li><code>tag.read</code></li>
+<li><code>memory.read</code></li>
 </ul>
-<h3 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>/data/
-  settings.json          # Global: immich URL, API key, friendly name, companion UUID
-  profiles/
-    living-room.json     # One file per profile (no API key — injected at serve time)
-  cache/
-    living-room.json     # Cached shuffled playlist (optional persistence)
-</code></pre></div>
-<h3 id="enriched-profile-response">Enriched Profile Response<a class="headerlink" href="#enriched-profile-response" title="Permanent link">&para;</a></h3>
-<p>When the Roku fetches a profile, the companion <strong>injects</strong> the immich connection details into the response. This means:</p>
+<p>Add <code>asset.download</code> only if you plan to use <strong>Original</strong> image quality.</p>
+<p>If your immich version does not support scoped permissions for API keys, create a normal user API key and keep it limited to the account whose library you want Immich Lounge to use.</p>
+<h2 id="where-the-key-is-used">Where the key is used<a class="headerlink" href="#where-the-key-is-used" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Profile files on disk do <strong>not</strong> contain the API key</li>
-<li>The Roku receives a single JSON object with everything it needs (including the API key for direct immich calls)</li>
-<li>The Roku caches this enriched profile locally for offline fallback</li>
+<li>the companion stores the immich URL and API key in its settings</li>
+<li>profile files on disk do not contain the API key</li>
+<li>the Roku receives the API key through the enriched profile so it can fetch media directly from immich</li>
 </ul>
-<h3 id="playlist-cache">Playlist Cache<a class="headerlink" href="#playlist-cache" title="Permanent link">&para;</a></h3>
-<p>The companion maintains one shuffled asset-ID list per profile. The cache lifecycle:</p>
-<ol>
-<li><strong>Cold cache</strong> — returns <code>{ building: true }</code> immediately; builds in background</li>
-<li><strong>Warm cache</strong> — returned immediately from memory (or disk if companion restarted)</li>
-<li><strong>Proactive rebuild</strong> — triggered before expiry (20% of interval, clamped to 1–10 minutes early)</li>
-<li><strong>Invalidation</strong> — immediately on profile update, profile delete, or global settings change</li>
-</ol>
-<hr />
-<h2 id="component-2-roku-channel-screensaver">Component 2: Roku Channel + Screensaver<a class="headerlink" href="#component-2-roku-channel-screensaver" title="Permanent link">&para;</a></h2>
-<p><strong>Tech stack:</strong> BrightScript, SceneGraph, Roku OS 15.0+</p>
-<p>The Roku project builds separate channel and screensaver variants. Both run the same display logic, but the channel mode has a richer setup flow.</p>
-<h3 id="startup-flow-channel">Startup Flow (Channel)<a class="headerlink" href="#startup-flow-channel" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>1. Read registry: companionUrl + selected profile ID
-2. Missing? → Setup screen
-3. Fetch enriched profile from companion
-4. Success → save to the mode-specific cached profile registry key
-5. Failure → load the mode-specific cached profile (or show error)
-6. Fetch playlist (up to 500 entries)
-7. Playlist building? → poll every 5s (up to 60s)
-8. Success → hold in memory; save 100-entry truncated copy to registry
-9. Failure → use the mode-specific cached playlist (or show error)
-10. Start slideshow
-11. Schedule periodic refresh (per refreshIntervalMinutes)
-</code></pre></div>
-<h3 id="registry-keys-roku">Registry Keys (Roku)<a class="headerlink" href="#registry-keys-roku" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Key</th>
-<th>Purpose</th>
-<th>Max size</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>companionUrl</code></td>
-<td>Shared companion base URL</td>
-<td>~50 bytes</td>
-</tr>
-<tr>
-<td><code>channelProfileId</code></td>
-<td>Selected profile for the channel</td>
-<td>~70 bytes</td>
-</tr>
-<tr>
-<td><code>screensaverProfileId</code></td>
-<td>Selected profile for the screensaver</td>
-<td>~70 bytes</td>
-</tr>
-<tr>
-<td><code>cachedChannelProfile</code></td>
-<td>Cached enriched channel profile</td>
-<td>~4 KB</td>
-</tr>
-<tr>
-<td><code>cachedScreensaverProfile</code></td>
-<td>Cached enriched screensaver profile</td>
-<td>~4 KB</td>
-</tr>
-<tr>
-<td><code>cachedChannelPlaylist</code></td>
-<td>Cached channel playlist fallback</td>
-<td>~9.5 KB</td>
-</tr>
-<tr>
-<td><code>cachedScreensaverPlaylist</code></td>
-<td>Cached screensaver playlist fallback</td>
-<td>~9.5 KB</td>
-</tr>
-</tbody>
-</table>
-<p>The app keeps only one cached playlist per mode and truncates it before writing to the registry to stay within Roku's storage limits.</p>
-<h3 id="media-url-construction">Media URL Construction<a class="headerlink" href="#media-url-construction" title="Permanent link">&para;</a></h3>
-<p>The Roku builds media URLs directly from the immich server URL stored in the cached enriched profile:</p>
-<table>
-<thead>
-<tr>
-<th>Asset type</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Photo (preview)</td>
-<td><code>&lt;immichUrl&gt;/api/assets/&lt;id&gt;/thumbnail?size=preview</code></td>
-</tr>
-<tr>
-<td>Photo (original)</td>
-<td><code>&lt;immichUrl&gt;/api/assets/&lt;id&gt;/original</code></td>
-</tr>
-<tr>
-<td>Video</td>
-<td><code>&lt;immichUrl&gt;/api/assets/&lt;id&gt;/video/playback</code></td>
-</tr>
-<tr>
-<td>Live Photo</td>
-<td><code>&lt;immichUrl&gt;/api/assets/&lt;livePhotoVideoId&gt;/video/playback</code></td>
-</tr>
-</tbody>
-</table>
-<p>All immich API calls include: <code>x-api-key: &lt;apiKey&gt;</code> header.</p>
-<h3 id="fallback-chain">Fallback Chain<a class="headerlink" href="#fallback-chain" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Condition</th>
-<th>Behaviour</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Companion offline</td>
-<td>Use the cached profile for the current mode; toast "Using cached config (companion offline)"</td>
-</tr>
-<tr>
-<td>immich offline</td>
-<td>Use the cached playlist for the current mode; toast "Using cached playlist (immich offline)"</td>
-</tr>
-<tr>
-<td>Per-slide metadata fail</td>
-<td>Omit that overlay field for the slide</td>
-</tr>
-<tr>
-<td>Individual asset load fail</td>
-<td>Skip silently; increment failure counter</td>
-</tr>
-<tr>
-<td>&gt;20 consecutive failures</td>
-<td>Pause slideshow; show 60-second countdown</td>
-</tr>
-<tr>
-<td>No cache + companion offline</td>
-<td>Full-screen error with setup hint</td>
-</tr>
-<tr>
-<td>Profile deleted (404)</td>
-<td>Toast; navigate to setup</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="component-3-immich-server">Component 3: immich Server<a class="headerlink" href="#component-3-immich-server" title="Permanent link">&para;</a></h2>
-<p>The Roku interacts with immich directly using these endpoints:</p>
-<table>
-<thead>
-<tr>
-<th>Call</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>GET /api/assets/&lt;id&gt;</code></td>
-<td>Per-slide metadata (date, location, people, EXIF)</td>
-</tr>
-<tr>
-<td><code>GET /api/assets/&lt;id&gt;/thumbnail?size=preview</code></td>
-<td>Preview image</td>
-</tr>
-<tr>
-<td><code>GET /api/assets/&lt;id&gt;/original</code></td>
-<td>Original image</td>
-</tr>
-<tr>
-<td><code>GET /api/assets/&lt;id&gt;/video/playback</code></td>
-<td>Video/Live Photo playback</td>
-</tr>
-</tbody>
-</table>
-<p>The companion uses these endpoints for playlist building:</p>
-<table>
-<thead>
-<tr>
-<th>Call</th>
-<th>Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>POST /api/search/assets</code></td>
-<td>Search by album, person, or tag</td>
-</tr>
-<tr>
-<td><code>GET /api/memories?date=&lt;date&gt;</code></td>
-<td>Fetch "On This Day" memories</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="security-model">Security Model<a class="headerlink" href="#security-model" title="Permanent link">&para;</a></h2>
-<p>Immich Lounge is designed for <strong>trusted home networks only</strong>:</p>
-<ul>
-<li>The companion web UI and API are <strong>unauthenticated</strong></li>
-<li>The immich API key is stored in plaintext in the companion's data volume</li>
-<li>The enriched profile (including the API key) is cached in the Roku's registry</li>
-<li><strong>Do not expose the companion port (4383) to the internet</strong></li>
-</ul>
-<p>Future: optional Basic Auth on the companion (out of scope for v1).</p>
+<p>Because of that, Immich Lounge is intended for trusted home networks only.</p>
+<p>For more on where the key is stored and how the profile enrichment works, see <a href=".././architecture/">Architecture</a>.</p>
 
 
 
@@ -1683,7 +1245,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../roku-apps/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using the Roku Apps">
+          <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installation">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -1693,20 +1255,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Using the Roku Apps
+                Installation
               </div>
             </div>
           </a>
         
         
           
-          <a href="../changelog/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog">
+          <a href="../configuration/" class="md-footer__link md-footer__link--next" aria-label="Next: Configuration">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Changelog
+                Configuration
               </div>
             </div>
             <div class="md-footer__button md-icon">

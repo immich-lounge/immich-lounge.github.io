@@ -484,6 +484,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../api-key/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 18h-6v-3h-1.7c-1.1 2.4-3.6 4-6.3 4-3.9 0-7-3.1-7-7s3.1-7 7-7c2.7 0 5.2 1.6 6.3 4H24v6h-3zm-4-2h2v-3h3v-2H11.9l-.2-.7C11 8.3 9.1 7 7 7c-2.8 0-5 2.2-5 5s2.2 5 5 5c2.1 0 4-1.3 4.7-3.3l.2-.7H17zM7 15c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3m0-4c-.6 0-1 .4-1 1s.4 1 1 1 1-.4 1-1-.4-1-1-1"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Immich API Key
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../configuration/" class="md-nav__link">
         
   
@@ -866,6 +896,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#which-immich-api-key-permissions-does-immich-lounge-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which immich API key permissions does Immich Lounge need?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#can-the-channel-and-screensaver-use-different-profiles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1211,6 +1252,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#which-immich-api-key-permissions-does-immich-lounge-need" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which immich API key permissions does Immich Lounge need?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#can-the-channel-and-screensaver-use-different-profiles" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1315,6 +1367,20 @@
 <li>Optional cached playlists</li>
 </ul>
 <p>It does not copy your full photo library into the companion.</p>
+<hr />
+<h2 id="which-immich-api-key-permissions-does-immich-lounge-need">Which immich API key permissions does Immich Lounge need?<a class="headerlink" href="#which-immich-api-key-permissions-does-immich-lounge-need" title="Permanent link">&para;</a></h2>
+<p>If your immich version supports scoped API keys, use:</p>
+<ul>
+<li><code>asset.read</code></li>
+<li><code>asset.statistics</code></li>
+<li><code>asset.view</code></li>
+<li><code>album.read</code></li>
+<li><code>person.read</code></li>
+<li><code>tag.read</code></li>
+<li><code>memory.read</code></li>
+</ul>
+<p>Add <code>asset.download</code> only if you plan to use <strong>Original</strong> image quality.</p>
+<p>For the current immich steps to create the key, see <a href=".././api-key/">Immich API Key</a>.</p>
 <hr />
 <h2 id="can-the-channel-and-screensaver-use-different-profiles">Can the channel and screensaver use different profiles?<a class="headerlink" href="#can-the-channel-and-screensaver-use-different-profiles" title="Permanent link">&para;</a></h2>
 <p>Yes. They share the same companion connection, but the Roku channel and Roku screensaver can use different selected profiles.</p>
