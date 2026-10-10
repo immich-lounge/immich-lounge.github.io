@@ -1,0 +1,30 @@
+# Immich Lounge
+
+> Roku channel and screensaver for your immich library
+
+## Overview
+
+- [Home](<https://immich-lounge.github.io/index.md>)
+- [Architecture](<https://immich-lounge.github.io/architecture/index.md>)
+
+## Setup
+
+- [Getting Started](<https://immich-lounge.github.io/getting-started/index.md>)
+- [Installation](<https://immich-lounge.github.io/installation/index.md>)
+- [Immich API Key](<https://immich-lounge.github.io/api-key/index.md>)
+
+## Guides
+
+- [Configuration](<https://immich-lounge.github.io/configuration/index.md>)
+- [Using the Companion](<https://immich-lounge.github.io/companion-app/index.md>)
+- [Using the Roku Apps](<https://immich-lounge.github.io/roku-apps/index.md>)
+
+## Help
+
+- [FAQ](<https://immich-lounge.github.io/faq/index.md>)
+- [Troubleshooting](<https://immich-lounge.github.io/troubleshooting/index.md>)
+- [Support](<https://immich-lounge.github.io/support/index.md>)
+
+## Releases
+
+- [Changelog](<https://immich-lounge.github.io/changelog/index.md>)
