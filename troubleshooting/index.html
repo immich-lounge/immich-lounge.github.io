@@ -933,6 +933,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#playlists-fail-to-build-with-memories-enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Playlists fail to build with Memories enabled
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-clock-date-or-weather-is-missing" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1224,6 +1235,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#playlists-fail-to-build-with-memories-enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Playlists fail to build with Memories enabled
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-clock-date-or-weather-is-missing" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1324,6 +1346,10 @@ Most setup problems come down to one of three things: the Roku cannot reach the 
 <li>too many consecutive asset load failures, which triggers the built-in retry pause</li>
 </ul>
 <p>If you see <strong>Could not load the first photo. Retrying...</strong> on an older Roku app, remove any trailing <code>/</code> from the Immich server URL in the companion, save it, and refresh the Roku configuration. For example, use <code>http://192.168.1.10:2283</code>. Newer builds remove trailing slashes automatically.</p>
+<h2 id="playlists-fail-to-build-with-memories-enabled">Playlists fail to build with Memories enabled<a class="headerlink" href="#playlists-fail-to-build-with-memories-enabled" title="Permanent link">&para;</a></h2>
+<p>Immich v3.0.0–v3.0.2 can reject the date used for <strong>Include Memories (On This Day)</strong>. Check the companion logs for an HTTP <code>400</code> on <code>GET /api/memories</code>. A successful <strong>Test Connection</strong> does not check this endpoint.</p>
+<p>Immich fixed the date validation in <a href="https://github.com/immich-app/immich/releases/tag/v3.0.3">v3.0.3</a>. Upgrade to v3.0.3 or a newer release, then retry with Memories enabled. Until you can upgrade, disable <strong>Include Memories (On This Day)</strong> in the profile and save it to use the other content sources.</p>
+<p>If it still fails after upgrading, check the companion logs for the failing endpoint and HTTP status before resetting your configuration.</p>
 <h2 id="the-clock-date-or-weather-is-missing">The clock, date, or weather is missing<a class="headerlink" href="#the-clock-date-or-weather-is-missing" title="Permanent link">&para;</a></h2>
 <ul>
 <li>make sure those fields are enabled in the profile</li>
