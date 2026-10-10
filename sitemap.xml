@@ -4,22 +4,7 @@
         <loc>https://immich-lounge.github.io/</loc>
       </url>
       <url>
-        <loc>https://immich-lounge.github.io/getting-started/</loc>
-      </url>
-      <url>
-        <loc>https://immich-lounge.github.io/installation/</loc>
-      </url>
-      <url>
         <loc>https://immich-lounge.github.io/api-key/</loc>
-      </url>
-      <url>
-        <loc>https://immich-lounge.github.io/configuration/</loc>
-      </url>
-      <url>
-        <loc>https://immich-lounge.github.io/companion-app/</loc>
-      </url>
-      <url>
-        <loc>https://immich-lounge.github.io/roku-apps/</loc>
       </url>
       <url>
         <loc>https://immich-lounge.github.io/architecture/</loc>
@@ -28,18 +13,33 @@
         <loc>https://immich-lounge.github.io/changelog/</loc>
       </url>
       <url>
+        <loc>https://immich-lounge.github.io/companion-app/</loc>
+      </url>
+      <url>
+        <loc>https://immich-lounge.github.io/configuration/</loc>
+      </url>
+      <url>
         <loc>https://immich-lounge.github.io/faq/</loc>
       </url>
       <url>
-        <loc>https://immich-lounge.github.io/troubleshooting/</loc>
+        <loc>https://immich-lounge.github.io/getting-started/</loc>
       </url>
       <url>
-        <loc>https://immich-lounge.github.io/support/</loc>
+        <loc>https://immich-lounge.github.io/installation/</loc>
       </url>
       <url>
         <loc>https://immich-lounge.github.io/privacy/</loc>
       </url>
       <url>
+        <loc>https://immich-lounge.github.io/roku-apps/</loc>
+      </url>
+      <url>
+        <loc>https://immich-lounge.github.io/support/</loc>
+      </url>
+      <url>
         <loc>https://immich-lounge.github.io/tos/</loc>
+      </url>
+      <url>
+        <loc>https://immich-lounge.github.io/troubleshooting/</loc>
       </url>
 </urlset>
