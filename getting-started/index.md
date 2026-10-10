@@ -78,6 +78,8 @@ A profile controls content, slideshow behavior, overlays, and weather.
 
 Launch **Immich Lounge** on Roku, enter the companion URL, and choose a profile.
 
+For setup help on your phone, scan the QR code under **Setup &amp; support** on the Roku screen.
+
 Enter the companion host and keep the default port `4383`.
 
 After the Roku reaches the companion, choose the profile you want to use for this device.
