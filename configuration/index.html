@@ -654,6 +654,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#transition-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Transition duration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#side-by-side-portraits" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1254,6 +1265,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#transition-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Transition duration
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#side-by-side-portraits" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1358,7 +1380,10 @@ Most users only need three things here: connect the companion to immich, create 
 <p>A profile decides what to show and how to show it. You can create as many as you want.</p>
 <p>After changing a profile's content sources, <strong>Preview Match Count</strong> uses the new selection. Save the profile to apply it to the playlist when the Roku next refreshes it.</p>
 <p>Saving a profile or connection settings clears the affected companion playlists. Any build already using the previous settings is discarded; the next playlist request builds from the saved settings.</p>
-<p>Profiles with advanced content rules created through the API keep those rules when edited in the companion. Their album, people, and tag selectors are unavailable; edit the rules through the API. Memories and display settings can still be changed in the companion.</p>
+<p>Choose <strong>Any (OR)</strong> to include photos matching any selected album, person, or tag, or <strong>All (AND)</strong> to require every selection. With no sources or memories selected, use the whole library; with only memories enabled, show only those memories. <strong>Exclude people (NOT)</strong> removes photos containing any excluded person from all results, including added memories. For example, select your children with <strong>Any</strong>, then exclude yourself to show either child without you.</p>
+<p>Memories are added to the source results; they do not have to match the selected sources. Location restrictions and people exclusions still apply to memories.</p>
+<p>Profiles with nested content rules created through the API keep those rules when edited in the companion. Their source selectors are unavailable; edit the nested rules through the API. Excluded people, memories, and display settings can still be changed in the companion.</p>
+<p>The companion collects all matching result pages and removes duplicates. With <strong>Shuffle</strong> enabled, it randomizes the playlist when building it; it does not randomly choose a smaller sample. The Roku fetches the playlist in windows and keeps its place while the playlist version stays the same. Rebuilding can change the order. With shuffle off, photos are ordered by their original date, newest first.</p>
 <p><a class="glightbox" data-title="Immich Lounge companion profiles page" data-type="image" href=".././assets/screenshots/companion-profiles.png"><img alt="Immich Lounge companion profiles page" class="doc-screenshot on-glb" src=".././assets/screenshots/companion-profiles.png" /></a></p>
 <p class="doc-caption">Each profile can target a different room, use case, or screensaver setup.</p>
 
@@ -1419,6 +1444,8 @@ Most users only need three things here: connect the companion to immich, create 
 <h3 id="zoom-to-fit">Zoom to fit<a class="headerlink" href="#zoom-to-fit" title="Permanent link">&para;</a></h3>
 <p>In the profile's <strong>Slideshow</strong> settings, enable <strong>Zoom to fit (landscape photos)</strong> to fill the screen with landscape photos. This preserves the photo's proportions and crops the edges as needed. Portrait and square photos still show the whole image.</p>
 <p>The setting is off by default and works in both the channel and screensaver. After the Roku refreshes the profile, it applies to the next photo displayed.</p>
+<h3 id="transition-duration">Transition duration<a class="headerlink" href="#transition-duration" title="Permanent link">&para;</a></h3>
+<p>Set <strong>Transition duration (seconds)</strong> to 0.1–5 seconds, shorter than the photo interval. It controls fade, slide, and zoom transitions in both the channel and screensaver, including portrait-pair fades and background crossfades. <strong>None</strong> changes photos immediately. Existing profiles keep the 0.5-second default; changes apply on the next transition after the Roku refreshes its profile.</p>
 <h3 id="side-by-side-portraits">Side-by-side portraits<a class="headerlink" href="#side-by-side-portraits" title="Permanent link">&para;</a></h3>
 <p>Enable <strong>Show portrait photos side by side</strong> in the profile's <strong>Slideshow</strong> settings to pair consecutive portrait photos. Both photos are shown in full for one slideshow interval. Landscape, square, and unmatched portrait photos show alone. Pairs stay within the current playlist window and do not cross its boundary.</p>
 <p>The setting is off by default and works in both the channel and screensaver, including cached playlists. The overlay describes the left photo. Pairs fade together (or switch immediately if transitions are set to None); Ken Burns motion still applies to single photos.</p>
