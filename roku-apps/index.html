@@ -1370,6 +1370,8 @@
 <p class="doc-caption">The Roku settings dialog is available from the <code>*</code> button during channel playback.</p>
 
 <p>The Roku also checks the active profile configuration about every 5 minutes and applies display, clock, and weather changes without replacing the current playlist. Use <strong>Refresh Now</strong> when you intentionally want to re-fetch both the profile and playlist immediately.</p>
+<p>Offline fallback uses only cached data from the selected companion and profile. Changing a profile clears that mode's cache and resume position; changing the shared companion clears both modes. If the screensaver inherits the channel profile, changing that profile also clears the screensaver cache. The new selection must load successfully before it is available offline.</p>
+<p>After updating from a version that did not record the cache's companion and profile, open each Roku app while the companion is reachable to refresh its offline cache.</p>
 <h2 id="typical-setup-patterns">Typical Setup Patterns<a class="headerlink" href="#typical-setup-patterns" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use one profile for the channel and another for the screensaver if you want different rooms or moods.</li>
