@@ -911,6 +911,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#a-profile-is-missing-from-the-companion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A profile is missing from the companion
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#test-connection-fails-in-the-companion" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1213,6 +1224,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#a-profile-is-missing-from-the-companion" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        A profile is missing from the companion
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#test-connection-fails-in-the-companion" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1329,6 +1351,9 @@ Most setup problems come down to one of three things: the Roku cannot reach the 
 <li><code>docker compose logs</code></li>
 <li>local firewall rules for port <code>4383</code></li>
 </ul>
+<h2 id="a-profile-is-missing-from-the-companion">A profile is missing from the companion<a class="headerlink" href="#a-profile-is-missing-from-the-companion" title="Permanent link">&para;</a></h2>
+<p>Check the companion logs for <strong>Could not read profile file</strong>. An invalid or temporarily unreadable file in <code>/data/profiles/</code> is skipped so other profiles keep working. The file is left unchanged; restore it from a backup or correct its JSON, then reload the profile list. A temporary file-access problem resolves when the file becomes readable again.</p>
+<p>If the logs say <strong>Could not read profiles for playlist refresh</strong>, check access to the profile directory. The companion retries on the next refresh cycle.</p>
 <h2 id="test-connection-fails-in-the-companion">Test Connection fails in the companion<a class="headerlink" href="#test-connection-fails-in-the-companion" title="Permanent link">&para;</a></h2>
 <p>Check:</p>
 <ul>
