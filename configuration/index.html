@@ -647,6 +647,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#location-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Location filters
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#profile-planning" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1214,6 +1225,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#location-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Location filters
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#profile-planning" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1259,7 +1281,8 @@ Most users only need three things here: connect the companion to immich, create 
 <li>immich API key</li>
 </ul>
 <p>Use an immich URL that the Roku can reach on your LAN. <code>localhost</code>, <code>127.0.0.1</code>, <code>::1</code>, and wildcard bind addresses are not valid here.</p>
-<p>After saving, use <strong>Test Connection</strong> to make sure the companion can reach immich.</p>
+<p>After saving, use <strong>Test Connection</strong> to make sure the companion can reach Immich. The result also shows the server version and selected search API. Immich Lounge selects Search API v2 for stable Immich 3.2+ servers and legacy search for older servers. If version detection is unavailable, it uses legacy search with the same filters.</p>
+<p>Detection refreshes automatically after five minutes; <strong>Test Connection</strong> refreshes it immediately. No settings or profile migration is needed.</p>
 <p><img alt="Immich Lounge companion connection page" class="doc-screenshot" src=".././assets/screenshots/companion-connection.png" /></p>
 <p class="doc-caption">The connection page stores the single immich connection used by all profiles.</p>
 
@@ -1303,7 +1326,7 @@ Most users only need three things here: connect the companion to immich, create 
 <tbody>
 <tr>
 <td>Content</td>
-<td>Albums, people, tags, memories, and optional date filtering</td>
+<td>Albums, people, tags, memories, and optional date and location filtering</td>
 </tr>
 <tr>
 <td>Playback</td>
@@ -1329,6 +1352,10 @@ Most users only need three things here: connect the companion to immich, create 
 <p>Enable <strong>Show portrait photos side by side</strong> in the profile's <strong>Slideshow</strong> settings to pair consecutive portrait photos. Both photos are shown in full for one slideshow interval. Landscape, square, and unmatched portrait photos show alone. Pairs stay within the current playlist window and do not cross its boundary.</p>
 <p>The setting is off by default and works in both the channel and screensaver, including cached playlists. The overlay describes the left photo. Pairs fade together (or switch immediately if transitions are set to None); Ken Burns motion still applies to single photos.</p>
 <p>If the right photo cannot load, the left shows alone and the right is retried as the next item. Changes apply to the next photo displayed after the profile refresh.</p>
+<h2 id="location-filters">Location filters<a class="headerlink" href="#location-filters" title="Permanent link">&para;</a></h2>
+<p>In the profile editor, fill in <strong>Country</strong>, <strong>State / province</strong>, or <strong>City</strong> to limit the playlist by location. Suggestions come from locations in your Immich library. Use the exact names stored in Immich; if suggestions are unavailable, you can enter those names manually.</p>
+<p>All filled fields must match. Blank fields impose no restriction. For example, a country alone includes all matching locations in that country. A country and city together require both to match. The location filter applies to selected sources and added memories; photos without the required location metadata are excluded.</p>
+<p>Location filters work with both legacy search and Search API v2. They use Immich's location metadata, not a distance or radius around a map point. Leave all three fields blank to preserve the existing playlist behavior.</p>
 <h2 id="profile-planning">Profile planning<a class="headerlink" href="#profile-planning" title="Permanent link">&para;</a></h2>
 <p>The channel and screensaver share the same companion URL, but they can use different profiles.</p>
 <p>That means you can:</p>
