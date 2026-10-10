@@ -1217,11 +1217,11 @@
 <p>The Connection page stores the shared immich connection used by every profile.</p>
 <p>Use it when you need to:</p>
 <ul>
-<li>change the friendly name shown in the UI</li>
 <li>update the immich server URL</li>
 <li>replace the API key</li>
-<li>verify access with <strong>Test Connection</strong></li>
+<li>save the entered settings and verify access with <strong>Save &amp; Test Connection</strong></li>
 </ul>
+<p><strong>Save</strong> stores the settings without testing. <strong>Save &amp; Test Connection</strong> stores them first, then checks access to Immich. A failed test does not undo the saved settings.</p>
 <p>If you need to generate or rotate the key, see <a href=".././api-key/">Immich API Key</a>.</p>
 <p><img alt="Immich Lounge companion connection page" class="doc-screenshot" src=".././assets/screenshots/companion-connection.png" /></p>
 <p class="doc-caption">The connection page is the one shared integration point between the companion and immich.</p>
@@ -1235,6 +1235,9 @@
 <li>remove a profile you no longer need</li>
 <li>compare which profiles exist before switching the Roku to a different one</li>
 </ul>
+<p>When there are no profiles yet, choose <strong>Create a Profile</strong>. Enter a name; the companion generates a profile ID automatically. Use <strong>Customize profile ID</strong> if you want a different ID or the generated one is already in use.</p>
+<p><strong>Refresh Playlist</strong> requests a rebuild for one profile; <strong>Refresh All Playlists</strong> requests it for every profile. The confirmation means the request was accepted, not that the background rebuild has finished.</p>
+<p>Deleting a profile requires confirmation. It removes the companion profile, not your Immich photos. Update any schedule or Roku selection that refers to the deleted profile.</p>
 <p><img alt="Immich Lounge companion profiles page" class="doc-screenshot" src=".././assets/screenshots/companion-profiles.png" /></p>
 <p class="doc-caption">Profiles are where most day-to-day tuning happens after setup is complete.</p>
 
