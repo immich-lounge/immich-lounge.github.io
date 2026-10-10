@@ -1251,6 +1251,11 @@
                   
 
   
+    <a href="https://github.com/immich-lounge/immich-lounge/edit/master/docs/website/installation.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-file-pen" viewBox="0 0 24 24"><path d="M12.659 22H18a2 2 0 0 0 2-2V8a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 14 2H6a2 2 0 0 0-2 2v9.34"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10.378 12.622a1 1 0 0 1 3 3.003L8.36 20.637a2 2 0 0 1-.854.506l-2.867.837a.5.5 0 0 1-.62-.62l.836-2.869a2 2 0 0 1 .506-.853z"/></svg>
+    </a>
+  
   
 
 
@@ -1259,14 +1264,39 @@
 <p>If you already run immich with Docker Compose, the simplest setup is to add one service to that existing compose file.</p>
 <p>Use a normal Docker port mapping on <code>4383</code>. Do not expose the companion to the public internet.</p>
 <h2 id="preferred-setup">Preferred setup<a class="headerlink" href="#preferred-setup" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Add the service to your existing Immich <code>docker-compose.yml</code>.</li>
-<li>Keep the companion in the same trusted LAN as your Roku and immich server.</li>
-<li>Keep <code>/data</code> persisted with a Docker volume.</li>
-</ul>
-<p>Reference file:
-<a href="https://github.com/immich-lounge/immich-lounge/blob/master/docker-compose.yml">docker-compose.yml</a></p>
-<p>Copy/paste snippet:</p>
+<p>Choose the Compose layout that fits your installation. Keep the companion on the same trusted LAN as your Roku and Immich server, and persist its data in a Docker volume.</p>
+<div class="admonition warning">
+<p class="admonition-title">Keep the companion on your LAN</p>
+<p>Use a normal Docker port mapping on <code>4383</code>. The companion does not provide public-internet authentication.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Existing Immich stack</label><label for="__tabbed_1_2">Separate companion stack</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Add the service and named volume below to your existing Immich Compose file. Keep its existing services and volumes.</p>
+<div class="highlight"><span class="filename">Companion service and volume</span><pre><span></span><code><span class="c1"># docker-compose.yml</span>
+<span class="c1"># Add this service to your existing Immich docker-compose.yml.</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">immich-lounge-companion</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ghcr.io/immich-lounge/immich-lounge-companion:latest</span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">immich-lounge-companion</span>
+<span class="w">    </span><span class="nt">pull_policy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"4383:4383"</span><span class="w"> </span><span class="c1"># change the left side if 4383 is already in use; do NOT expose publicly</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">immich-lounge-data:/data</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ASPNETCORE_URLS=http://+:4383</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">immich-lounge-data</span><span class="p">:</span>
+</code></pre></div>
+<p>From that stack's folder, start only the companion:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>immich-lounge-companion
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>Create a folder for the companion and save this as <code>docker-compose.yml</code>:</p>
 <div class="highlight"><span class="filename">docker-compose.yml</span><pre><span></span><code><span class="c1"># docker-compose.yml</span>
 <span class="c1"># Add this service to your existing Immich docker-compose.yml.</span>
 <span class="nt">services</span><span class="p">:</span>
@@ -1285,13 +1315,22 @@
 <span class="nt">volumes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">immich-lounge-data</span><span class="p">:</span>
 </code></pre></div>
+<p>From that folder, start the companion:</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
-<p>The companion stores settings, profiles, and cache data under <code>/data</code>.</p>
-<p>To update later:</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull
-docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
+</div>
+</div>
+</div>
+<p>The companion stores settings, profiles, schedules, and cache data under <code>/data</code>.</p>
+<details class="info">
+<summary>Why localhost does not work for the Immich URL</summary>
+<p>The companion and Roku both need to reach the Immich server. <code>localhost</code> refers to the device making the request, so it does not identify your Immich server from the Roku. Use its LAN host name or IP address.</p>
+</details>
+<p>To update the companion later, run these from its Compose folder:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>pull<span class="w"> </span>immich-lounge-companion
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>immich-lounge-companion
 </code></pre></div>
+<p>Reference: <a href="https://github.com/immich-lounge/immich-lounge/blob/master/docker-compose.yml">docker-compose.yml</a>.</p>
 <h2 id="roku-apps">Roku apps<a class="headerlink" href="#roku-apps" title="Permanent link">&para;</a></h2>
 <p>Add the Roku apps to your account:</p>
 <div class="roku-links-card">
@@ -1329,7 +1368,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> 
 <div class="highlight"><pre><span></span><code>http://192.168.1.10:4383
 </code></pre></div>
 <p>Then choose a profile.</p>
-<p><img alt="Roku companion connection screen" class="doc-screenshot" src=".././assets/screenshots/change-companion.png" /></p>
+<p><a class="glightbox" data-title="Roku companion connection screen" data-type="image" href=".././assets/screenshots/change-companion.png"><img alt="Roku companion connection screen" class="doc-screenshot on-glb" src=".././assets/screenshots/change-companion.png" /></a></p>
 <p class="doc-caption">Manual companion setup on Roku uses the companion host and port <code>4383</code>.</p>
 
 <h2 id="screensaver-setup">Screensaver setup<a class="headerlink" href="#screensaver-setup" title="Permanent link">&para;</a></h2>
@@ -1371,6 +1410,8 @@ docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> 
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
@@ -1456,7 +1497,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> 
       
         
         
-      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.instant","navigation.instant.progress","navigation.footer","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","content.code.copy","toc.follow","search.suggest","search.highlight"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+      <script id="__config" type="application/json">{"annotate":null,"base":"..","features":["navigation.instant","navigation.instant.progress","navigation.footer","navigation.sections","navigation.tabs","navigation.tabs.sticky","navigation.top","navigation.tracking","content.action.edit","content.tabs.link","content.code.copy","toc.follow","search.suggest","search.highlight"],"redirect":null,"search":"../assets/javascripts/workers/search.7d14d953.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
       <script src="../assets/javascripts/bundle.8b1c90bd.min.js"></script>
