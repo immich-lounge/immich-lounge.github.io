@@ -632,6 +632,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#memories" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Memories
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#zoom-to-fit" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1221,6 +1232,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#memories" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Memories
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#zoom-to-fit" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1389,6 +1411,11 @@ Most users only need three things here: connect the companion to immich, create 
 <p class="doc-caption">Example slideshow with a left-side overlay, persistent clock, and weather.</p>
 
 <p>When weather is enabled for a profile, you can choose whether the Roku shows temperatures in Celsius or Fahrenheit.</p>
+<h3 id="memories">Memories<a class="headerlink" href="#memories" title="Permanent link">&para;</a></h3>
+<p>In <strong>Content Sources</strong>, choose <strong>Include On This Day memories</strong>, <strong>Include birthday memories</strong>, or both. When memories are the only selected source, the playlist contains only those memories. With albums, people, or tags selected, memories are added to those photos. Location and minimum file size filters still apply; the profile's date filter applies to the regular sources, not added memories.</p>
+<p>Birthday memories require <strong>Immich 3.3 or later</strong>, a birth date set for the person in Immich, and matching photos from previous birthdays. Immich generates the selection and makes it available from three days before the birthday through the birthday itself. The birthday option is off by default and is unavailable if the companion cannot detect a supported server.</p>
+<p>Enable <strong>Show birthday captions</strong> to display the person's birthday alongside the photo date in either overlay style. The caption follows the overlay's visibility setting; an overlay style of <strong>None</strong> hides it. Album labels remain separate. Offline playlists keep the photos but omit birthday captions to avoid showing an outdated birthday message.</p>
+<p>Choose a <strong>Memories time zone</strong> to control which day's memories are requested. <strong>Companion time zone</strong> preserves the existing host-based date selection; containers often use UTC. The companion checks for a new day every 30 seconds and rebuilds memory playlists even when their normal refresh interval has not elapsed. The Roku picks up the result on its next playlist refresh. This setting does not change the Roku clock or a schedule's time zone.</p>
 <h3 id="zoom-to-fit">Zoom to fit<a class="headerlink" href="#zoom-to-fit" title="Permanent link">&para;</a></h3>
 <p>In the profile's <strong>Slideshow</strong> settings, enable <strong>Zoom to fit (landscape photos)</strong> to fill the screen with landscape photos. This preserves the photo's proportions and crops the edges as needed. Portrait and square photos still show the whole image.</p>
 <p>The setting is off by default and works in both the channel and screensaver. After the Roku refreshes the profile, it applies to the next photo displayed.</p>
