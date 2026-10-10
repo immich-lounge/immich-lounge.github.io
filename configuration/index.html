@@ -668,6 +668,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#schedules" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Schedules
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1246,6 +1257,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#schedules" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Schedules
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1369,6 +1391,13 @@ Most users only need three things here: connect the companion to immich, create 
 <p class="doc-caption">Use the Roku settings menu to refresh, switch profile, change companion, or clear cache.</p>
 
 <p>For the actual Roku-side behavior and menu actions, see <a href=".././roku-apps/">Using the Roku Apps</a>.</p>
+<h2 id="schedules">Schedules<a class="headerlink" href="#schedules" title="Permanent link">&para;</a></h2>
+<p>Profiles define photos, transitions and display settings. Schedules are separate, reusable objects that choose which profile plays when. Open <strong>Schedules</strong> in the companion, create a named schedule, choose its time zone and fallback profile, then add weekly time slots referencing existing profiles.</p>
+<p>On Roku, choose a <strong>Profile</strong> for fixed playback or a <strong>Schedule</strong> for automatic switching. The channel and screensaver can follow different selections. Choosing a fixed profile stops following the schedule until you select the schedule again.</p>
+<p>Outside the time slots, the fallback profile plays. Disabling time slots also uses the fallback. Each slot uses its referenced profile's content and display settings. Overlapping slots use the first matching row; use <strong>Move up</strong> to change priority. A schedule can reference profiles, including its fallback profile, but cannot reference another schedule.</p>
+<p>Start times are included and end times are excluded. An earlier end time runs into the next day: a Friday 22:00–06:00 slot ends on Saturday morning. Equal start and end times mean 24 hours from the starting day. Slots follow local time in the chosen zone, including daylight saving changes.</p>
+<p>Schedules are checked each minute while playback runs. A paused slideshow waits to switch until playback resumes; old queued switches expire and are checked again. If a target playlist is empty or unavailable, the current slideshow continues and the Roku retries. If a referenced profile is deleted, the fallback is used. If both are unavailable, the Roku keeps its cached playback when possible. When the companion is offline, the Roku keeps its last configuration; schedule changes require the companion.</p>
+<p>Schedules are saved separately in the companion's <code>schedules/</code> data folder. Deleting a schedule does not delete its profiles. If you delete the schedule currently selected on a Roku, choose another schedule or profile on that Roku.</p>
 
 
 
