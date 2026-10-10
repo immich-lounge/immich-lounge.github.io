@@ -1267,6 +1267,7 @@
 </ul>
 <p><strong>Save</strong> stores the settings without testing. <strong>Save &amp; Test Connection</strong> stores them first, then checks access to Immich. A failed test does not undo the saved settings.</p>
 <p>If you need to generate or rotate the key, see <a href=".././api-key/">Immich API Key</a>.</p>
+<p>The page includes key creation instructions and an expandable permission list. After a successful connection test, follow <strong>Next: create or choose a profile</strong>.</p>
 <p><a class="glightbox" data-title="Immich Lounge companion connection page" data-type="image" href=".././assets/screenshots/companion-connection.png"><img alt="Immich Lounge companion connection page" class="doc-screenshot on-glb" src=".././assets/screenshots/companion-connection.png" /></a></p>
 <p class="doc-caption">The connection page is the one shared integration point between the companion and immich.</p>
 
@@ -1287,6 +1288,8 @@
 
 <h2 id="profile-editor">Profile editor<a class="headerlink" href="#profile-editor" title="Permanent link">&para;</a></h2>
 <p>Each profile controls both what the Roku shows and how playback should feel.</p>
+<p>The summary at the top shows the selected sources, photo interval, shuffle setting, and image quality. <strong>Content Sources</strong> and <strong>Slideshow</strong> stay open; expand <strong>Location</strong>, <strong>Media</strong>, <strong>Overlay &amp; Clock</strong>, <strong>Date &amp; Time</strong>, or <strong>Weather</strong> when needed. These sections keep their existing settings when collapsed.</p>
+<p>You can edit display settings before connecting Immich. Follow <strong>Configure connection</strong> to enable source selection and match previews. If sources cannot load, check the connection and use the picker’s retry button; the rest of the editor remains usable.</p>
 <table>
 <thead>
 <tr>
@@ -1320,6 +1323,7 @@
 <li>Enter a name, choose the time zone and fallback profile, and add weekly time slots.</li>
 <li>Save the schedule, then select it on Roku instead of a fixed profile.</li>
 </ol>
+<p>The schedule ID is generated from the name. Expand <strong>Customize schedule ID</strong> to change it before saving, including when the generated ID is already in use. Existing schedule IDs stay fixed.</p>
 <p>Outside the time slots, the fallback profile plays. Overlapping slots use the first matching row; move rows up to change priority. The channel and screensaver can follow different schedules.</p>
 <p>Deleting a schedule keeps its profiles. Choose another schedule or profile on any Roku that used the deleted schedule.</p>
 <p>For time-zone, fallback, and offline behavior, see <a href=".././configuration/#schedules">Schedules</a>.</p>
