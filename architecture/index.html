@@ -1470,6 +1470,7 @@
 <li><strong>Proactive rebuild</strong> — triggered before expiry (20% of interval, clamped to 1–10 minutes early)</li>
 <li><strong>Invalidation</strong> — immediately on profile update, profile delete, or global settings change</li>
 </ol>
+<p>Profiles can set <code>photoSource</code> to <code>all</code>, <code>selected</code>, or <code>memories</code>; omitted values retain the existing source behavior. <code>memories.prioritize</code> promotes matching memory entries before the remaining entries, including within device shuffle cycles. Explicit memory-enabled profiles get a fresh playlist version and shuffle when their configured date changes. Playlist responses include <code>memoryDay</code> so Roku can apply the new day at a slide boundary and resume at its head after an overnight stop.</p>
 <hr />
 <h2 id="component-2-roku-channel-screensaver">Component 2: Roku Channel + Screensaver<a class="headerlink" href="#component-2-roku-channel-screensaver" title="Permanent link">&para;</a></h2>
 <p><strong>Tech stack:</strong> BrightScript, SceneGraph, Roku OS 15.0+</p>
