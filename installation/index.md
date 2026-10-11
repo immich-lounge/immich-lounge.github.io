@@ -4,6 +4,8 @@ Check the [requirements](<https://immich-lounge.github.io/#requirements>) before
 
 ## Companion
 
+The companion image supports AMD64 (x86-64) and ARM64 hosts with a 64-bit operating system. Docker selects the matching image automatically; no `platform` override is needed.
+
 If you already run immich with Docker Compose, the simplest setup is to add one service to that existing compose file.
 
 Use a normal Docker port mapping on `4383`. Do not expose the companion to the public internet.
