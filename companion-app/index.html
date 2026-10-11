@@ -1265,7 +1265,7 @@
 <li>replace the API key</li>
 <li>save the entered settings and verify access with <strong>Save &amp; Test Connection</strong></li>
 </ul>
-<p><strong>Save</strong> stores the settings without testing. <strong>Save &amp; Test Connection</strong> stores them first, then checks access to Immich. A failed test does not undo the saved settings.</p>
+<p><strong>Save without testing</strong> stores the settings without testing. <strong>Save &amp; Test Connection</strong> stores them first, then checks access to Immich. A failed test does not undo the saved settings.</p>
 <p>If you need to generate or rotate the key, see <a href=".././api-key/">Immich API Key</a>.</p>
 <p>The page includes key creation instructions and an expandable permission list. After a successful connection test, follow <strong>Next: create or choose a profile</strong>.</p>
 <p><a class="glightbox" data-title="Immich Lounge companion connection page" data-type="image" href=".././assets/screenshots/companion-connection.png"><img alt="Immich Lounge companion connection page" class="doc-screenshot on-glb" src=".././assets/screenshots/companion-connection.png" /></a></p>
@@ -1288,7 +1288,11 @@
 
 <h2 id="profile-editor">Profile editor<a class="headerlink" href="#profile-editor" title="Permanent link">&para;</a></h2>
 <p>Each profile controls both what the Roku shows and how playback should feel.</p>
-<p>The summary at the top shows the selected sources, photo interval, shuffle setting, and image quality. <strong>Content Sources</strong> and <strong>Slideshow</strong> stay open; expand <strong>Location</strong>, <strong>Media</strong>, <strong>Overlay &amp; Clock</strong>, <strong>Date &amp; Time</strong>, or <strong>Weather</strong> when needed. These sections keep their existing settings when collapsed.</p>
+<p>Use <strong>Photos</strong> to choose your library content, <strong>Playback</strong> to set the pace and fit, and <strong>Appearance</strong> to choose the background and on-screen information. Only one view is shown at a time. Switching views keeps your unsaved changes.</p>
+<p>Memories and less-used settings sit in expandable options within each view. Choose <strong>Albums</strong>, <strong>People</strong>, <strong>Tags</strong>, or <strong>Location</strong> at the same level. Tabs only change which controls are visible; selections in every category remain active. The <strong>Showing</strong> summary lists the combined selection and any location or exclusions. <strong>Any selection</strong> combines albums, people, and tags; <strong>Every selection</strong> requires all of them to match. Location narrows all selected sources and memories; filled country, state, and city fields must all match. Source matching, exclusions, and file size are under <strong>Filters</strong>. Memories and their time zone are under <strong>Memories</strong>. Refresh timing and transition duration are under <strong>More playback options</strong>. Weather and custom date formats are under <strong>Appearance</strong>.</p>
+<p>Choose <strong>Preview selection</strong> to see the matching count and up to six sample photos without saving. Changing photo criteria clears the old preview. If a thumbnail cannot load, the count remains available.</p>
+<p>Profiles with advanced API-defined rules keep those rules; source matching controls are available only for editable album, people, and tag selections.</p>
+<p>The save bar shows whether changes are pending. Choose <strong>Save changes</strong> to keep them, or <strong>Close</strong> to return to Profiles. If you keep editing while a save is pending, the editor stays open and keeps the newer edits marked as unsaved. Save again to keep those edits. Leaving with unsaved changes requires confirmation. If the companion restarts and your session expires, choose <strong>Reload page</strong> in the recovery dialog; unsaved edits may be lost.</p>
 <p>You can edit display settings before connecting Immich. Follow <strong>Configure connection</strong> to enable source selection and match previews. If sources cannot load, check the connection and use the picker’s retry button; the rest of the editor remains usable.</p>
 <table>
 <thead>
@@ -1299,21 +1303,21 @@
 </thead>
 <tbody>
 <tr>
-<td>Content</td>
-<td>Albums, people, tags, memories, and optional date filters</td>
+<td>Photos</td>
+<td>Albums, people, tags, memories, location, and file filters</td>
 </tr>
 <tr>
 <td>Playback</td>
 <td>Interval, shuffle, transitions, photo motion, and refresh timing</td>
 </tr>
 <tr>
-<td>Display</td>
-<td>Overlay style, fields, background effects, date formatting, weather, and image quality</td>
+<td>Appearance</td>
+<td>Photo details, backgrounds, clock, date formatting, weather, and image quality</td>
 </tr>
 </tbody>
 </table>
 <p><a class="glightbox" data-title="Immich Lounge companion profile editor" data-type="image" href=".././assets/screenshots/companion-profile-editor.png"><img alt="Immich Lounge companion profile editor" class="doc-screenshot on-glb" src=".././assets/screenshots/companion-profile-editor.png" /></a></p>
-<p class="doc-caption">The profile editor combines content selection, playback settings, and visual tuning in one place.</p>
+<p class="doc-caption">The profile editor separates photos, playback, and appearance into focused views.</p>
 
 <h2 id="schedules-page">Schedules page<a class="headerlink" href="#schedules-page" title="Permanent link">&para;</a></h2>
 <p>Schedules choose which profile plays at different times; profiles still hold the photos and display settings.</p>
@@ -1336,7 +1340,7 @@
 </ul>
 <h2 id="what-the-companion-does-not-do">What the companion does not do<a class="headerlink" href="#what-the-companion-does-not-do" title="Permanent link">&para;</a></h2>
 <ul>
-<li>it does not proxy image delivery</li>
+<li>Roku fetches slideshow images directly from Immich; the companion only fetches small samples when you preview a selection</li>
 <li>it does not store the API key inside the profile JSON files on disk</li>
 <li>it does not control Roku-side cache clearing or profile switching directly</li>
 </ul>
