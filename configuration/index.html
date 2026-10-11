@@ -628,7 +628,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What you can configure">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-albums-and-people" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Shared albums and people
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shared albums and people">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1250,7 +1261,18 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="What you can configure">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shared-albums-and-people" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Shared albums and people
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shared albums and people">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1451,9 +1473,18 @@ Most users only need three things here: connect the companion to immich, create 
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Shared albums:</strong> Immich Lounge currently lists only albums owned by the configured Immich user. Shared albums are hidden because Immich search does not yet reliably return assets from shared albums. Track upstream support in the Immich discussion <a href="https://github.com/immich-app/immich/discussions/2995">Shared Albums in Search Results</a>.</p>
-</blockquote>
+<h2 id="shared-albums-and-people">Shared albums and people<a class="headerlink" href="#shared-albums-and-people" title="Permanent link">&para;</a></h2>
+<p>Albums shared with the Immich account used by the companion can be selected. People filters and exclusions also search the selected albums.</p>
+<p>People sharing and photo sharing are separate. On Immich 3.3 or later, users in the same cluster group can share person records so their names appear in the People selectors and photo labels. The photos still need to be shared through an album or partner sharing.</p>
+<p>To show one person from a shared album:</p>
+<ol>
+<li>In Immich, share the album with the account whose API key is configured in the companion.</li>
+<li>Add both users to the same cluster group and share the person with that account.</li>
+<li>In the profile's <strong>Photos</strong> view, select the album and person.</li>
+<li>Under <strong>Filters</strong>, choose <strong>Every selection</strong>. <strong>Any selection</strong> includes the whole album as well as other matching photos.</li>
+</ol>
+<p>To remove a person from that album instead, select the album and add the person under <strong>Exclude people (NOT)</strong>. Exclusions also apply to added memories.</p>
+<p>Person-only profiles use Immich's normal owned/partner library search. Select the shared album as well to include photos shared only through that album.</p>
 <p><a class="glightbox" data-title="Immich Lounge slideshow with overlay, clock, and weather" data-type="image" href=".././assets/screenshots/slideshow.png"><img alt="Immich Lounge slideshow with overlay, clock, and weather" class="doc-screenshot on-glb" src=".././assets/screenshots/slideshow.png" /></a></p>
 <p class="doc-caption">Example slideshow with a left-side overlay, persistent clock, and weather.</p>
 
