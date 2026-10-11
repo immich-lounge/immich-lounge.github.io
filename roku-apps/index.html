@@ -1375,6 +1375,10 @@
 <td>Re-fetches the current profile and playlist immediately.</td>
 </tr>
 <tr>
+<td><code>Restart with fresh shuffle</code></td>
+<td>Starts a new randomized loop from the beginning. Shown when <strong>Shuffle</strong> is enabled and there is more than one photo. Requires the companion to be reachable.</td>
+</tr>
+<tr>
 <td><code>Choose Profile or Schedule</code></td>
 <td>Keeps the companion URL and lets you pick a fixed profile or a named schedule for channel mode. Selecting a fixed profile stops following a schedule.</td>
 </tr>
@@ -1392,6 +1396,7 @@
 <p class="doc-caption">The Roku settings dialog is available from the <code>*</code> button during channel playback.</p>
 
 <p>The Roku also checks the active profile configuration about every 5 minutes and applies display, clock, and weather changes without replacing the current playlist. Use <strong>Refresh Now</strong> when you intentionally want to re-fetch both the profile and playlist immediately.</p>
+<p>Closing and reopening a Roku app resumes its saved photo and shuffle loop. Each mode saves its position separately. Use <strong>Restart with fresh shuffle</strong> in the channel when you want a new order immediately; it does not restart another device or the screensaver's saved loop. If the request fails, the current playlist and saved position are kept.</p>
 <p>If an empty playlist gains photos, playback starts when the next playlist refresh finds them. A paused channel waits until you resume. This also works when a previously playing playlist becomes empty and later gains photos again.</p>
 <p>Offline fallback uses only cached data from the selected companion and profile. Changing a profile clears that mode's cache and resume position; changing the shared companion clears both modes. If the screensaver inherits the channel profile, changing that profile also clears the screensaver cache. The new selection must load successfully before it is available offline.</p>
 <p>When matching cached settings and photos are available, both apps wait up to two seconds for settings and three seconds for a playlist before using the cache. Photos normally appear in about five seconds plus image-loading time when the companion is unavailable. Without a usable cache, startup keeps the longer connection and playlist-building wait. Playback checks the companion again through its normal refresh cycle.</p>
