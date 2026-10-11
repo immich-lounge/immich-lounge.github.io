@@ -27,6 +27,8 @@ The connection page stores the single immich connection used by all profiles.
 
 A profile decides what to show and how to show it. You can create as many as you want.
 
+New profiles created in the companion start with **Overlay Behavior** set to **Always On** and **Show Progress Timer** off. You can change both in the profile editor. Existing profiles keep their saved settings.
+
 After changing a profile's content sources, **Preview Match Count** uses the new selection. Save the profile to apply it to the playlist when the Roku next refreshes it.
 
 Saving a profile or connection settings clears the affected companion playlists. Any build already using the previous settings is discarded; the next playlist request builds from the saved settings.
