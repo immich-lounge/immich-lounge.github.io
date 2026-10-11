@@ -6,6 +6,7 @@ For technical release details, see [CHANGELOG.md](<https://github.com/immich-lou
 
 ## Unreleased
 
+- Choose how photo locations appear: city and country, full city/state/province/country, city only, state/province and country, or country only. Existing profiles keep city and country.
 - Make the website easier to read with a true light mode, clearer links and buttons, and simpler card backgrounds. Follow your system theme by default and remember your choice when you switch modes.
 
 ## 1.1.0 — 2026-10-11
