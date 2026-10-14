@@ -7,6 +7,7 @@ For technical release details, see [CHANGELOG.md](<https://github.com/immich-lou
 ## Unreleased
 
 - Retry unreadable original photos using JPEG previews.
+- Include the whole final day in date-filtered playlists.
 
 ## 1.2.1 — 2026-10-14
 

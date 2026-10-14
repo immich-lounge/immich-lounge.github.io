@@ -737,6 +737,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#date-filter-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Date filter boundaries
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#location-filters" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1398,6 +1409,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#date-filter-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Date filter boundaries
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#location-filters" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1589,6 +1611,8 @@ Most users only need three things here: connect the companion to immich, create 
 <p>If the right photo cannot load, the left shows alone and the right is retried as the next item. Changes apply to the next photo displayed after the profile refresh.</p>
 <h2 id="image-loading">Image loading<a class="headerlink" href="#image-loading" title="Permanent link">&para;</a></h2>
 <p>When an original photo cannot load, Immich Lounge retries its JPEG preview before skipping it. This also covers formats the Roku cannot decode.</p>
+<h2 id="date-filter-boundaries">Date filter boundaries<a class="headerlink" href="#date-filter-boundaries" title="Permanent link">&para;</a></h2>
+<p>Date ranges configured through the API use UTC calendar days and include the entire final day. Explicit ISO timestamps keep their exact bounds. Empty bounds are omitted.</p>
 <h2 id="location-filters">Location filters<a class="headerlink" href="#location-filters" title="Permanent link">&para;</a></h2>
 <p>In the profile editor, fill in <strong>Country</strong>, <strong>State / province</strong>, or <strong>City</strong> to limit the playlist by location. Suggestions come from locations in your Immich library. Use the exact names stored in Immich; if suggestions are unavailable, you can enter those names manually.</p>
 <p>All filled fields must match. Blank fields impose no restriction. For example, a country alone includes all matching locations in that country. A country and city together require both to match. The location filter applies to selected sources and added memories; photos without the required location metadata are excluded.</p>
