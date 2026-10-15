@@ -132,7 +132,7 @@ To remove a person from that album instead, select the album and add the person 
 
 Person-only profiles use Immich's normal owned/partner library search. Select the shared album as well to include photos shared only through that album.
 
-Example fullscreen slideshow with an album label and persistent clock.
+Alpine Escapes playing with photo information, a persistent clock, and date.
 
 When weather is enabled for a profile, you can choose whether the Roku shows temperatures in Celsius or Fahrenheit.
 

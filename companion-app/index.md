@@ -67,6 +67,10 @@ You can edit display settings before connecting Immich. Follow **Configure conne
 
 The profile editor separates photos, playback, and appearance into focused views.
 
+Set the pace, transitions, photo motion, and portrait pairing for each profile.
+
+Choose the background, photo information, clock, and date.
+
 ## Schedules page
 
 Schedules choose which profile plays at different times; profiles still hold the photos and display settings.
@@ -79,6 +83,8 @@ Schedules choose which profile plays at different times; profiles still hold the
 The schedule ID is generated from the name. Expand **Customize schedule ID** to change it before saving, including when the generated ID is already in use. Existing schedule IDs stay fixed.
 
 Outside the time slots, the fallback profile plays. Overlapping slots use the first matching row; move rows up to change priority. The channel and screensaver can follow different schedules.
+
+Alpine Escapes plays on weekdays, Quiet Evenings plays each evening, and Travel Favourites fills the remaining time.
 
 Deleting a schedule keeps its profiles. Choose another schedule or profile on any Roku that used the deleted schedule.
 

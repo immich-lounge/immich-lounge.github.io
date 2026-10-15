@@ -43,6 +43,12 @@ Roku's support article for changing screensavers is here: [How to change the scr
 
 If **Immich Lounge Screensaver** is already selected, you only need **Configure Screensaver** to switch it to a different companion or profile.
 
+## Photo display
+
+Landscape photos can fill the screen. Portrait photos can play side by side without cropping, with a background effect behind them. Choose these options in the companion profile's **Playback** and **Appearance** views.
+
+Quiet Evenings pairs portrait photos with Ambilight Glow. The photo information describes the left image.
+
 ## Remote Controls
 
 In channel mode:

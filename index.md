@@ -2,7 +2,7 @@ Display your [Immich](<https://immich.app>) photos as a slideshow or screensaver
 
 [Get started](<https://immich-lounge.github.io/getting-started>) [Installation](<https://immich-lounge.github.io/installation>) [GitHub](<https://github.com/immich-lounge/immich-lounge>)
 
-Your photos on the TV, with optional information, clock, and weather.
+Your photos on the TV, with optional photo information, clock, and date.
 
 Add the Roku apps to your account:
 
@@ -29,13 +29,17 @@ Keep different photo selections for rooms or occasions. Switch between profiles 
 
 Use the same profile for both, or choose different profiles and schedules for each.
 
-## In Action
+Pair portrait photos side by side and choose a background that suits the room.
 
-Configure the companion with your immich server URL and API key.
+## Make it your own
 
-Select a profile on the Roku after connecting to the companion.
+Choose an album and preview the photos that will play.
 
-Refresh, switch profile, change companion, or clear cache from the Roku menu.
+Choose the background and the details shown on your TV.
+
+Keep different photo selections and display settings in named profiles.
+
+Switch profiles by time and day, with a fallback for the rest of the week.
 
 ## How it connects
 
