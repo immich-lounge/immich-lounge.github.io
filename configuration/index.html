@@ -649,6 +649,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#newest-photo-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Newest photo limit
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#only-photos-with-people" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1354,6 +1365,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#newest-photo-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Newest photo limit
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#only-photos-with-people" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1630,6 +1652,11 @@ Most users only need three things here: connect the companion to immich, create 
 <p>These filters narrow all selected sources, including memories and shared albums, and apply to both the channel and screensaver. Favorites use the account whose API key is configured in the companion. Immich does not report photos owned by other accounts as favorites, even when shared through an album or partner sharing. Ratings use the photo's Immich metadata.</p>
 <p>Choose <strong>Preview selection</strong> to check the matching count and sample photos, then save. Changes to favorites or ratings in Immich appear on the next playlist rebuild. Existing profiles keep both filters off. No extra Immich API permissions are needed.</p>
 <p>For API-managed profiles, set <code>"onlyFavorites": true</code> and/or <code>"minimumRating": 4</code> at the top level. Omit these fields (or use <code>false</code> and <code>null</code>) to leave the selection unfiltered. The minimum rating must be an integer from 1 to 5; unrated photos are skipped when a minimum is set.</p>
+<h3 id="newest-photo-limit">Newest photo limit<a class="headerlink" href="#newest-photo-limit" title="Permanent link">&para;</a></h3>
+<p>Under <strong>Photos → Filters</strong>, set <strong>Newest photo limit</strong> to a positive whole number, or leave it blank to include every match. For example, <strong>All photos</strong> plus a limit of <strong>100</strong> shows the newest 100 matching photos. Add <strong>Only favorites</strong> to show the newest 100 favorites.</p>
+<p>The companion applies all other filters first, then selects up to N playable photos by capture date. Memories count toward the same limit; memory priority changes playback order, not which photos qualify. Shuffle and oldest/newest playback order apply after selection. Both Roku apps use the resulting playlist.</p>
+<p>Capture date uses Immich's original EXIF date, falling back to its file-created date. Photos with no usable date sort last; ties use the asset ID for stable selection. <strong>Preview selection</strong> shows the capped count and samples. New matching photos enter on the next playlist rebuild. Existing profiles have no limit.</p>
+<p>For API-managed profiles, set the top-level <code>"newestPhotoCount": 100</code>. Omit it or use <code>null</code> for no limit; zero and negative values are rejected.</p>
 <h3 id="only-photos-with-people">Only photos with people<a class="headerlink" href="#only-photos-with-people" title="Permanent link">&para;</a></h3>
 <p>To show photos containing anyone, without choosing specific people:</p>
 <ol>
